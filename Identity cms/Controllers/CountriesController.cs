@@ -56,7 +56,7 @@ namespace Identity_cms.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Create([Bind("Id,Name,Area")] Country country)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Identity_cms.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Edit(int id,  Country country)
         {
             if (id != country.Id)
             {
